@@ -35,6 +35,14 @@ class VXML
     "<#{@tag}#{process_options}>#{process_content}</#{@tag}>"
   end
 
+  def to_vxml
+    "<?xml version="1.0"?>" + self.to_s
+  end
+
+  def to_xml
+    self.to_vxml
+  end
+
   def process_options
     if( @options.size > 0 )
       " " + @options.collect{|key,val|

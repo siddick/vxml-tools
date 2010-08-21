@@ -34,5 +34,9 @@ Create vxml file with controller :-
 Create vxml file only :-
 	rails g vxml:controller ivr hello_world
 
+Configure the routes
+	get "hai/hello_world(.:format)"
+
+	
 
 

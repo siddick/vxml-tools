@@ -1,3 +1,4 @@
+$LOAD_PATH.push( './lib' )
 require 'vxml-tools'
 
 Gem::Specification.new do |s|
