@@ -36,7 +36,7 @@ class VXML
   end
 
   def to_vxml
-    "<?xml version="1.0"?>" + self.to_s
+    '<?xml version="1.0"?>' + self.to_s
   end
 
   def to_xml
