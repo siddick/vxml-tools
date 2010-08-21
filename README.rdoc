@@ -1,0 +1,38 @@
+== VXML Tools 
+	It contain library and Generator for the Rails 3 application.
+
+=== Example
+You can write VXML in Ruby. 
+First Method :-
+	vxml = VXML.new do|v|
+	  v.block do |b|
+	    b.prompt "Welcome to all"
+	    b.if_cond "1==1" do |v|
+	      v.prompt "Both are equal"
+	    end
+	  end
+	end  
+
+	render :xml => vxml.to_vxml
+	
+Second Method :-
+	v = VXML.new 
+	b = v.block
+	  b.prompt "Welcome to all"
+	  cond = b.if_cond "1==1"
+	  cond.prompt "Both are equal"
+
+	render :xml => v.to_vxml
+
+=== Syntax
+
+=== Create vxml view file .
+
+Create vxml file with controller :-
+	rails g controller ivr hello_world -e vxml
+
+Create vxml file only :-
+	rails g vxml:controller ivr hello_world
+
+
+
